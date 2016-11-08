@@ -18,3 +18,19 @@ require('./bootstrap');
 // const app = new Vue({
 //     el: '#app'
 // });
+
+
+function collapseNavbar() {
+	var height = $('header').height();
+
+	if($(window).scrollTop() > height) {
+		$(".navbar").addClass('navbar-fixed-top');
+		 $(".navbar-fixed-placeholder").addClass('ph-show');
+	} else {
+		$(".navbar").removeClass('navbar-fixed-top');
+		$(".navbar-fixed-placeholder").removeClass('ph-show');
+	} 
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);

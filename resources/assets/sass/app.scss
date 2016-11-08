@@ -2,19 +2,185 @@
 // Fonts
 //@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 //@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400); 
+@import url(https://fonts.googleapis.com/css?family=Lato:300); 
+@import url("https://fonts.googleapis.com/css?family=Source%20Sans%20Pro%3Aregular%7CLato%3Aregular%7CLato%3Aregular%7CLato%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular%7CSource%20Sans%20Pro%3Aregular&subset=latin");
+
 
 // Variables
 //@import "variables";
 
 //@import "node_modules/bootswatch-sass/paper/variables";
 
-@import "variables";
+//@import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 // Paper
-@import "node_modules/bootswatch-sass/paper/bootswatch";
+//@import "node_modules/bootswatch-sass/paper/bootswatch";
+//
+//
+body,html {
+    height: 100%;
+    width: 100%
+}
 
-body{padding-top:50px}
+body {
+    background-color: #fff;
+    font-family: "Source Sans Pro", HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 16px;
+    color: #666;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
 
+h1, h2 { color: #000; font-family: Lato, sans-serif; }
+h1 { font-size: 64px; }
+h2 { font-size: 36px; }
+h3 { 
+	font-size: 16px;
+	font-weight: 700;
+	margin-top: 25px;
+	margin-bottom: 15px;
+ }
 
+img {  max-width: 100%;
+    height: auto; }
+
+.img50 {  max-width: 49%;
+    height: auto; }
+
+.container.content { 
+	padding: 80px 10px;
+}
+
+.intro,body,html {
+    width: 100%
+}
+
+.intro {
+    display: table;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/header.jpg) center center no-repeat #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover
+}
+
+@media only screen and (min-width : 480px) {
+.intro {
+        //height:100%;
+        height: 35vh;
+    }
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px
+}
+
+.navbar-fixed-top  {
+     -webkit-backface-visibility: hidden;
+}
+.navbar-fixed-placeholder {
+	height: 50px;
+	display: none;
+}
+.navbar-fixed-placeholder.ph-show {
+	display: block;
+}
+
+.navbar-default {
+    background-color: #333;
+    border-color: #333;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: normal;
+	letter-spacing: 2px;
+}
+
+.nav > li > a {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #e8912a;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #333;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #333;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro {
+        //height:100%;
+        height: 95vh;
+        height: calc(100vh - 50px);
+        padding: 0
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 100px
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 26px
+    }
+}
+
+@media (max-width: 767px) /* @grid-float-breakpoint -1 */
+{
+    .navbar-fixed-top
+    {
+    position: relative;
+    top: auto;
+    }
+    .navbar-fixed-placeholder.ph-show {
+	display: none;
+}
+}
+
+footer {
+    background-color: #565656;
+    padding: 60px 10px;
+    color: #fff;
+}
